@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>Contact - Miniature Commissions</title>
 </head>
 <body>
@@ -16,13 +16,12 @@
             <a href="pricing.html">Pricing</a>
             <a href="contact.html" class="active">Contact</a>
         </nav>
-        <link rel="stylesheet" href="style.css">
     </header>
 
     <main>
         <section class="contact">
-            <h2>Contact Us</h2>
-            <p>Have questions or want to discuss a commission? Get in touch with us!</p>
+            <h2>Contact Me</h2>
+            <p>Have questions or want to discuss a commission? Get in touch!</p>
             <p>Average response time: 24-48 hours</p>
             <form action="#" method="post">
                 <div class="form-group">
@@ -32,6 +31,19 @@
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="game-system">Game System:</label>
+                    <select id="game-system" name="game-system" required>
+                        <option value="">Select a game system</option>
+                        <option value="warhammer-40k">Warhammer 40k</option>
+                        <option value="age-of-sigmar">Age of Sigmar</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="number-of-miniatures">Number of Miniatures:</label>
+                    <input type="number" id="number-of-miniatures" name="number-of-miniatures" min="1" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Message:</label>
