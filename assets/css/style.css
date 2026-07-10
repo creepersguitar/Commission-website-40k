@@ -38,9 +38,22 @@ a:hover {
     color: #f2f2f2;
 }
 
+#nav-toggle:checked + .nav-toggle-label {
+    color: #d4af37; /* change color when active */
+}
+
+#nav-toggle:checked ~ nav {
+    display: block;
+}
+
 /* Hide menu by default */
 nav {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
 }
 
 .menu {
