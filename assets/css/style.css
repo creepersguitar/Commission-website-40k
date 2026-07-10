@@ -25,3 +25,31 @@ a {
 a:hover {
   color: #d4af37; /* subtle “gold trim” vibe */
 }
+
+/* Hide checkbox */
+#nav-toggle {
+    display: none;
+}
+
+/* Hamburger icon */
+.nav-toggle-label {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #f2f2f2;
+}
+
+/* Hide menu by default */
+nav {
+    display: none;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Show menu when checkbox is clicked */
+#nav-toggle:checked ~ nav {
+    display: block;
+}
