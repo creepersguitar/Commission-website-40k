@@ -181,6 +181,13 @@ nav {
    Gallery Section
 ========================= */
 
+.btn-primary:hover {
+
+    background: #f2d06b;
+    transform: translateY(-3px);
+
+}
+
 .gallery {
     padding: 40px;
     text-align: center;
@@ -252,6 +259,13 @@ nav {
    Pricing Section
 ========================= */
 
+.btn-primary:hover {
+
+    background: #f2d06b;
+    transform: translateY(-3px);
+
+}
+
 .pricing {
     padding: 40px;
     text-align: center;
@@ -321,6 +335,96 @@ nav {
     margin-top: 40px;
     font-style: italic;
     color: #cccccc;
+}
+
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background:
+    linear-gradient(
+        rgba(15,15,15,0.85),
+        rgba(15,15,15,0.95)
+    ),
+    url("../Images/hero-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-content {
+    max-width: 900px;
+}
+
+
+.hero h1 {
+    font-size: 3.2rem;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+
+.hero p {
+    font-size: 1.2rem;
+    color: #f2f2f2;
+    margin-bottom: 15px;
+}
+
+
+/* Hero Buttons */
+
+.hero-buttons {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background: #1a1a1a;
+    color: #f2f2f2;
+
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+
+.btn:hover {
+    background: #d4af37;
+    color: #0f0f0f;
+    transform: translateY(-3px);
+}
+
+
+.btn-primary {
+    background: #d4af37;
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+
+.btn-primary:hover {
+    background: #f2d06b;
 }
 
 
