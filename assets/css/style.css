@@ -42,7 +42,7 @@ a:hover {
     color: #d4af37; /* change color when active */
 }
 
-#nav-toggle:checked ~ nav {
+.nav-menu.active {
     display: block;
 }
 
