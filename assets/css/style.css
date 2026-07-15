@@ -27,17 +27,13 @@ a:hover {
   color: #d4af37; /* subtle “gold trim” vibe */
 }
 
-/* Hide checkbox */
-#nav-toggle {
-    display: none;
-}
-
-/* Hamburger icon */
+/* Hamburger icon 
 .nav-toggle-label {
     font-size: 2rem;
     cursor: pointer;
     color: #f2f2f2;
 }
+*/
 
 #nav-toggle:checked + .nav-toggle-label {
     color: #d4af37; /* change color when active */
@@ -53,7 +49,7 @@ nav-menu.active {
 
 /* Hide menu by default */
 .nav-menu {
-    display: none;
+    display: block;
     position: absolute;
     top: 100%;
     left: 0;
