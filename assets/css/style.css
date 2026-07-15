@@ -42,8 +42,12 @@ a:hover {
     color: #d4af37; /* change color when active */
 }
 
-#nav-toggle:checked ~ nav {
+nav-menu.active {
     display: block;
+}
+
+.nav-toggle {
+    display: none;
 }
 
 /* Hide menu by default */
@@ -511,6 +515,38 @@ footer {
     .pricing-grid {
         grid-template-columns: 1fr;
     }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: white;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu li {
+        margin: 15px 0;
+    }
+
 }
 
 
