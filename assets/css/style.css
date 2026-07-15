@@ -521,6 +521,13 @@ footer {
 
 @media screen and (max-width: 768px) {
 
+    header {
+        position: relative;
+        align-items: center;
+        display: flex;
+        justify-content: space-between; 
+    }
+
     .nav-toggle {
         display: block;
         cursor: pointer;
@@ -532,7 +539,12 @@ footer {
 
     .nav-menu {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
+        background: #1a1a1a;
+        z-index: 1000;
     }
 
     .nav-menu.active {
@@ -542,6 +554,8 @@ footer {
     .menu {
         flex-direction: column;
         text-align: center;
+        display: flex;
+        padding: 20px 0;
     }
 
     .menu li {
