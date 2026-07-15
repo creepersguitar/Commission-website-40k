@@ -488,21 +488,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Mobile footer */
-
-@media screen and (max-width: 768px) {
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer-section a {
-        margin-left: 0;
-    }
-
-}
-
 
 /* media tags for responsiveness */
 @media (max-width: 1000px) {
@@ -556,6 +541,15 @@ footer {
 
     .menu li {
         margin: 15px 0;
+    }
+
+.footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-section a {
+        margin-left: 0;
     }
 
 }
