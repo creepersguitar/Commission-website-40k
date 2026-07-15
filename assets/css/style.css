@@ -39,28 +39,38 @@ a:hover {
     color: #d4af37;
  } /* change color when active */
 
-nav-menu.active {
+.nav-menu.active {
     display: block;
 }
 
 .nav-toggle {
-    display: none;
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #f2f2f2;
+    cursor: pointer;
 }
 
 /* Hide menu by default */
 .nav-menu {
-    display: block;
+    display: none;
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 250px;
     background: #1a1a1a;
 }
 
 .menu {
     list-style: none;
-    padding: 0;
+    padding: 20px;
     margin: 0;
+    text-align: center;
+}
+
+.menu li {
+    margin: 15px 0;
 }
 
 /* =========================
