@@ -13,3 +13,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+const filterButtons = document.querySelectorAll(".gallery-filters button");
+const galleryCards = document.querySelectorAll(".gallery-card");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const filter = button.dataset.filter;
+
+        galleryCards.forEach(card => {
+
+            if (filter === "all" || card.dataset.category === filter) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
