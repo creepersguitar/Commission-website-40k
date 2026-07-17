@@ -5,8 +5,11 @@ class StudioAI:
         self.available_hours = 20  # change later
 
     def evaluate_commission(self, commission):
-        difficulty = commission["difficulty"]
-        hours = commission["hours"]
+        
+        difficulty = commission.get("difficulty", "unknown")
+        hours = commission.get("hours", 0)
+        
+
 
         if hours > self.available_hours:
             return {
