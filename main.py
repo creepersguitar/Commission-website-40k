@@ -1,31 +1,54 @@
 from ai.Overseer.studio_ai import StudioAI
 from ai.The_Herald.customer_ai import CustomerAI
 
-customer_ai_instance = CustomerAI()
-customer_request = customer_ai_instance.process()
 
-studio_ai_instance = StudioAI()
-studio_response = studio_ai_instance.evaluate_commission(customer_request)
+# Create council members
+herald = CustomerAI()
+overseer = StudioAI()
 
+
+# Herald gathers customer request
+commission = herald.process()
+
+
+# Herald summarises request
+summary = herald.summarise(commission)
+
+print("\n--- Herald Summary ---")
+print(summary)
+
+
+# Overseer evaluates commission
+studio_response = overseer.evaluate_commission(commission)
+
+
+# Combine council response
 def combine(customer_request, studio_response):
-    return {
-        "customer": customer_request,
-        "studio": studio_response
-    }
+    return f"""
+===== Council Decision =====
+
+Customer: {customer_request['customer']}
+Army: {customer_request['army']}
+Models: {customer_request['models']}
+Paint Level: {customer_request['paint_level']}
+Deadline: {customer_request['deadline']}
+
+Overseer Decision:
+{studio_response['status']}
+
+Reason:
+{studio_response.get('reason', 'No reason provided')}
+
+Estimated Time:
+{studio_response.get('estimated_time', 'Unknown')}
+
+Difficulty:
+{studio_response.get('difficulty', 'Unknown')}
+"""
 
 
-final_answer = combine(customer_request, studio_response)
+final_answer = combine(commission, studio_response)
 
 
-
-studio = StudioAI()
-
-request = {
-    "model": "Custodian Guard",
-    "difficulty": "medium",
-    "hours": 10
-}
-
-result = studio.evaluate_commission(request)
-
-print(result)
+print("\n--- Council Decision ---")
+print(final_answer)
