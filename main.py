@@ -1,11 +1,12 @@
 from ai.Overseer.studio_ai import StudioAI
 from ai.The_Herald.customer_ai import CustomerAI
+from ai.Artisan.artisan import ArtisanAI
 
 
 # Create council members
 herald = CustomerAI()
 overseer = StudioAI()
-
+artisan = ArtisanAI()
 
 # Herald gathers customer request
 commission = herald.process()
@@ -16,6 +17,9 @@ summary = herald.summarise(commission)
 
 print("\n--- Herald Summary ---")
 print(summary)
+
+# Artisan response
+artisan_response = artisan.analyse_project(commission)
 
 
 # Overseer evaluates commission
