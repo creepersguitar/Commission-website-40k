@@ -37,3 +37,46 @@ filterButtons.forEach(button => {
     });
 
 });
+
+const contactForm = document.querySelector(".contact form");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+
+        const data = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            commission_type: formData.get("commission-type"),
+            game_system: formData.get("game-system"),
+            project: formData.get("project"),
+            number_of_miniatures: formData.get("number-of-miniatures"),
+            deadline: formData.get("deadline")
+        };
+
+        try {
+            const response = await fetch("/api/contact/submit-commission/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                alert("Commission request sent successfully!");
+                contactForm.reset();
+            } else {
+                alert(`Something went wrong: ${result.error}`);
+            }
+
+        } catch (error) {
+            console.error("Error submitting commission:", error);
+            alert("Unable to submit your commission request. Please try again.");
+        }
+    });
+}
