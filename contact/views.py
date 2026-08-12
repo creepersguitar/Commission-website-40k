@@ -4,6 +4,8 @@ from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_exempt
 import json
 
+from config.settings import EMAIL_HOST_USER
+
 
 @csrf_exempt
 def submit_commission(request):
@@ -44,7 +46,7 @@ Project Details:
 {project}
 """,
             from_email=None,
-            recipient_list=[os.environ.get("EMAIL_HOST_USER")],
+            recipient_list=[EMAIL_HOST_USER],
         )
 
         return JsonResponse(
